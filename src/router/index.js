@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 
 import Home from '../views/Home.vue';
 import MinifiedLinkReceiver from '../views/MinifiedLinkReceiver.vue';
+import Error404NotFound from '../views/Error404NotFoundView.vue';
 
 Vue.use(VueRouter);
 
@@ -21,6 +22,14 @@ const routes = [
     component: MinifiedLinkReceiver,
     meta: {
       title: 'Redirection is being performed ...',
+    },
+  },
+  {
+    path: '*',
+    name: 'Error404NotFound',
+    component: Error404NotFound,
+    meta: {
+      title: 'Error 404 Not Found',
     },
   },
 ];
